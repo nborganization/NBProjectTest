@@ -18,7 +18,12 @@ public class Dosen {
     public Dosen() {
     }
 
-    
+    public Dosen(String nid, String nama, String keahlian) {
+        this.nid = nid;
+        this.nama = nama;
+        this.alamat = "Bandung no.1";
+        this.keahlian = keahlian;
+    }
     public Dosen(String nid, String nama, String alamat, String keahlian) {
         this.nid = nid;
         this.nama = nama;
