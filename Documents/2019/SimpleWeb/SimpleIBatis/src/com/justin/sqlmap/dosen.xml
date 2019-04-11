@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+"http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="dosen" >
+ 
+  <insert id="insertDosen" parameterClass="com.justin.bean.Dosen" >
+    insert into dosen (nid, nama, alamat, keahlian)
+    values (#nid:VARCHAR#, #nama:VARCHAR#, #alamat:VARCHAR#, #keahlian:VARCHAR#)
+   </insert>
+   
+   <delete id="deleteDosen" parameterClass="com.justin.bean.Dosen">
+      DELETE FROM DOSEN
+      WHERE  nid = #nid#
+   </delete>
+
+  
+    <update id="updateDosen" parameterClass="com.justin.bean.Dosen">
+        UPDATE Dosen
+            SET    nama = #nama#
+            , alamat = #alamat#
+        WHERE  nid = #nid#
+   </update>
+    
+    <select id="getAllDosen" resultClass="com.justin.bean.Dosen">
+      SELECT * FROM DOSEN
+   </select>
+
+</sqlMap>

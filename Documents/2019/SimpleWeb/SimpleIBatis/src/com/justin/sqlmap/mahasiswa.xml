@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+"http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="mahasiswa" >
+ 
+  <insert id="insertMahasiswa" parameterClass="com.justin.bean.Mahasiswa" >
+    insert into mahasiswa (nim, nama, alamat, umur)
+    values (#nim:VARCHAR#, #nama:VARCHAR#, #alamat:VARCHAR#, #umur:INT#)
+  </insert>
+  
+  <select id="getAll" resultClass="Mahasiswa">
+      SELECT * FROM Mahasiswa
+   </select>
+   
+</sqlMap>
