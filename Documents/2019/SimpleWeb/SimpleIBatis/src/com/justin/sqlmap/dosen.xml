@@ -16,8 +16,8 @@
   
     <update id="updateDosen" parameterClass="com.justin.bean.Dosen">
         UPDATE Dosen
-            SET    nama = #nama#
-            , alamat = #alamat#
+            SET nama = #nama#
+            ,alamat = #alamat#
         WHERE  nid = #nid#
    </update>
     
